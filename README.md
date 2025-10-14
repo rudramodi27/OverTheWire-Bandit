@@ -14,3 +14,15 @@ Common misconceptions (if any)
 Tip: For those using the Windows Command Prompt to ssh into each level's server, you can right-click on the cmd after copying the password unlocked from the previous level. The right-click pastes the password which was copied. Using the normal shortcut keys to paste (CTRL + V or SHIFT + INSERT) did not work for me.
 
 # Walkthrough Guide
+# 🎯 Bandit Level 00 : The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1
+
+**Level Goal:**  
+Access the first file in the home directory.
+
+**💡 Tip:**  
+Hidden files can be listed with `ls -la`.
+
+**Commands Used:**  
+```bash
+ls -la
+cat file.txt

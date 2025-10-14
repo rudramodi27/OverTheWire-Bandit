@@ -225,6 +225,5 @@ private_keys/
 
 ---
 
-## 🔚 Final note
-This cheat sheet is concise and practical — add it to your repo as `commands.md` or `commands/README.md`. Keep secrets out of version control.
+
 

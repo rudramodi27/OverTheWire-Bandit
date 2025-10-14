@@ -31,7 +31,8 @@ cat readme
 ## 🔑 Password for Next Level
 `<REDACTED>`  <!-- Replace with actual password only in your local copy. Do NOT publish the real password publicly. -->
 ```
-# 🎯 Bandit Level 01
+# The output of the above command is the password for level 0.
+# 🎯 Bandit Level 00 → Level 01
 *⚠️ Spoiler Alert:**  
 This walkthrough contains the solution to Bandit Level 1. Open only if you want to see the answer.
 
@@ -55,5 +56,30 @@ bandit1@bandit.labs.overthewire.org s password: Use the password you obtained fr
 ls
 cat ./-
 ```
+# The output of the above command is the password for level 1.
+# 🎯 Bandit Level 01 → Level 02
 
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 1 to level 2. If you want to solve it yourself, stop reading now.
 
+---
+
+## 🎯 Level Goal
+The password for the next level is stored in a file called `-` located in the home directory.
+
+---
+
+## 💡 Quick Tip
+- If a filename looks odd (like `-`), many commands treat `-` as stdin. To refer to a filename that begins with a dash, prefix it with `./` or use `--` where supported.
+- Never commit real passwords or keys to a public repo — use `<REDACTED>`.
+
+---
+
+## 📝 Commands Used
+```bash
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+bandit2@bandit.labs.overthewire.org s password: Use the password you obtained from level 1 (store it only locally; do not push to remote).
+ls
+cat ./--spaces\ in \ this \ filename\--
+```
+# The output of the above command is the password for level 2.

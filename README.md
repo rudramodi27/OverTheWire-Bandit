@@ -84,3 +84,32 @@ cat ./--spaces\ in \ this \ filename\--
 
 # The output of the above command is the password for level 2.
 ```
+# 🎯 Bandit Level 02 → Level 03
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 2 to level 3. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is stored in a file called `spaces in this filename` located in the home directory.
+
+---
+
+## 💡 Quick Tip
+- Filenames can contain spaces. Use quotes (`"..."` or `'...'`) or escape spaces with backslashes (`\ `) when referring to such files.
+- Don't publish real passwords — use `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used
+```bash
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+bandit3@bandit.labs.overthewire.org s password: Use the password you obtained from level 2 (store it only locally; do not push to remote).
+ls
+cd inhere
+ls -a
+cat ./...Hiding-From-You
+
+# The output of the above command is the password for level 3.
+```

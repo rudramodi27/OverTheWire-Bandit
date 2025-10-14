@@ -30,8 +30,7 @@ ls
 cat readme
 ## 🔑 Password for Next Level
 `<REDACTED>`  <!-- Replace with actual password only in your local copy. Do NOT publish the real password publicly. -->
-
-
+```
 # 🎯 Bandit Level 01
 *⚠️ Spoiler Alert:**  
 This walkthrough contains the solution to Bandit Level 1. Open only if you want to see the answer.
@@ -52,8 +51,9 @@ The password for the next level is stored in a file called `readme` located in t
 ## 📝 Commands Used
 ```bash
 ssh bandit1@bandit.labs.overthewire.org -p 2220
-bandit1@bandit.labs.overthewire.org s password: "Use the password you obtained from level 0" (store it only locally; do not push to remote).
+bandit1@bandit.labs.overthewire.org s password: Use the password you obtained from level 0 (store it only locally; do not push to remote).
 ls
 cat ./-
+```
 
 

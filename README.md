@@ -28,6 +28,9 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 bandit0@bandit.labs.overthewire.org s password: bandit0
 ls
 cat readme
+## 🔑 Password for Next Level
+`<REDACTED>`  <!-- Replace with actual password only in your local copy. Do NOT publish the real password publicly. -->
+
 
 # 🎯 Bandit Level 01
 *⚠️ Spoiler Alert:**  
@@ -49,7 +52,7 @@ The password for the next level is stored in a file called `readme` located in t
 ## 📝 Commands Used
 ```bash
 ssh bandit1@bandit.labs.overthewire.org -p 2220
-bandit1@bandit.labs.overthewire.org s password: whatever you got in bandit0 write down there
+bandit1@bandit.labs.overthewire.org s password: "Use the password you obtained from level 0" (store it only locally; do not push to remote).
 ls
 cat ./-
 

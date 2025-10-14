@@ -30,8 +30,9 @@ ls
 cat readme
 ## 🔑 Password for Next Level
 `<REDACTED>`  <!-- Replace with actual password only in your local copy. Do NOT publish the real password publicly. -->
-```
+
 # The output of the above command is the password for level 0.
+```
 # 🎯 Bandit Level 00 → Level 01
 *⚠️ Spoiler Alert:**  
 This walkthrough contains the solution to Bandit Level 1. Open only if you want to see the answer.

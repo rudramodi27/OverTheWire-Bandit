@@ -29,3 +29,28 @@ bandit0@bandit.labs.overthewire.org s password: bandit0
 ls
 cat readme
 
+# 🎯 Bandit Level 01
+*⚠️ Spoiler Alert:**  
+This walkthrough contains the solution to Bandit Level 1. Open only if you want to see the answer.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is stored in a file called `readme` located in the home directory.
+
+---
+
+## 💡 Tip
+- Windows users: Right-click in CMD to paste the copied password (CTRL+V often doesn’t work).  
+- Always use `ls -la` to see hidden files if needed.
+
+---
+
+## 📝 Commands Used
+```bash
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+bandit1@bandit.labs.overthewire.org s password: whatever you got in bandit0 write down there
+ls
+cat ./-
+
+

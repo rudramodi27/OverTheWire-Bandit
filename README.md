@@ -28,8 +28,6 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 bandit0@bandit.labs.overthewire.org s password: bandit0
 ls
 cat readme
-## 🔑 Password for Next Level
-`<REDACTED>`  <!-- Replace with actual password only in your local copy. Do NOT publish the real password publicly. -->
 
 # The output of the above command is the password for level 0.
 ```
@@ -56,8 +54,9 @@ ssh bandit1@bandit.labs.overthewire.org -p 2220
 bandit1@bandit.labs.overthewire.org s password: Use the password you obtained from level 0 (store it only locally; do not push to remote).
 ls
 cat ./-
-```
+
 # The output of the above command is the password for level 1.
+```
 # 🎯 Bandit Level 01 → Level 02
 
 **⚠️ SPOILER ALERT**  
@@ -82,5 +81,6 @@ ssh bandit2@bandit.labs.overthewire.org -p 2220
 bandit2@bandit.labs.overthewire.org s password: Use the password you obtained from level 1 (store it only locally; do not push to remote).
 ls
 cat ./--spaces\ in \ this \ filename\--
-```
+
 # The output of the above command is the password for level 2.
+```

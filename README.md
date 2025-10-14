@@ -236,3 +236,151 @@ grep millionth data.txt
 
 # The output of the above command is the password for level 7.
 ```
+# 🎯 Bandit Level 07 → Level 08
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 7 to level 8. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+Find and read the file that contains the password for the next level. The file may have unusual permissions or be accessible only in a specific way.
+
+---
+
+## 💡 Quick Tips
+- Check file permissions and ownership with `ls -la`. Look for files readable by your user or group.  
+- Use `find` to search for files with specific permissions (`-perm`) or ownership (`-user`/`-group`).  
+- If a file looks like a private key, **do not** publish it — keep it local and safe.  
+- **Do NOT** publish real passwords — use `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+bandit8@bandit.labs.overthewire.org s password: Use the password you obtained from level 7 (store it only locally; do not push to remote).
+ls
+head -n 10 data.txt
+cat data.txt | sort | uniq -u
+
+# The output of the above command is the password for level 7.
+```
+# 🎯 Bandit Level 08 → Level 09
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 8 to level 9. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is stored somewhere accessible from the current account — it may require inspecting file contents, permissions, or using an available key/tool to read it.
+
+---
+
+## 💡 Quick Tips
+- Inspect home directory first: `pwd && ls -la`. Many Bandit levels hide the password in home or a nearby folder.  
+- Check `.ssh` and other dotfiles for keys or hints, but **do not** publish private keys.  
+- Use `file`, `strings`, `stat`, and `ls -lb` to understand file types and spot weird filenames.  
+- `find` with filters (size, owner, permissions) narrows down candidates quickly.  
+- Use `<REDACTED>` in repo; keep real password only in local/private notes.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit9@bandit.labs.overthewire.org -p 2220
+bandit9@bandit.labs.overthewire.org s password: Use the password you obtained from level 8 (store it only locally; do not push to remote).
+ls
+head -n 4 data.txt
+cat data.txt | strings -e s | grep ==
+
+# The output of the above command is the password for level 8.
+```
+# 🎯 Bandit Level 09 → Level 10
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 9 to level 10. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+Locate and read the file that contains the password for the next level. The password may be hidden inside a file with unusual format, encoding, or permissions.
+
+---
+
+## 💡 Quick Tips
+- Start with `pwd && ls -la` to understand where you are.  
+- Use `file`, `strings`, and `hexdump`/`xxd` to inspect non-plain-text files.  
+- Try common decoders/unpackers (base64, gzip, bzip2, tar, zip) based on `file` output.  
+- Use `find` + `wc -c` to surface very small files (passwords are often short).  
+- **Never** publish real passwords or private keys to a public repo — use `<REDACTED>`.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit10@bandit.labs.overthewire.org -p 2220
+bandit10@bandit.labs.overthewire.org s password: Use the password you obtained from level 9 (store it only locally; do not push to remote).
+ls
+cat data.txt
+cat data.txt | base64 -d
+
+# The output of the above command is the password for level 9.
+```
+# 🎯 Bandit Level 10 → Level 11
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 10 to level 11. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+Locate and read the file that contains the password for the next level. The password may be hidden in a file, require using a private key found in the environment, or require reading a file owned by a different user (but accessible to you).
+
+---
+
+## 💡 Quick Tips
+- Start with `pwd && ls -la` to see your home and hidden files.  
+- Look for SSH keys or oddly-named files (`.ssh`, `id_rsa`, `keyfile`, etc.) but **do not** publish keys.  
+- If you find a private key and it's allowed to be used, set secure permissions locally (`chmod 600 keyfile`) before using it with `ssh -i`.  
+- Use `file`, `strings`, `stat`, `ls -lb`, and `find` to locate likely candidates.  
+- Always redact passwords/keys in public repos: use `<REDACTED>`.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit11@bandit.labs.overthewire.org -p 2220
+bandit11@bandit.labs.overthewire.org s password: Use the password you obtained from level 10 (store it only locally; do not push to remote).
+ls
+cat data.txt
+cat data.txt | 'A-Za-z' 'N-ZA-Mn-za-m'
+
+# The output of the above command is the password for level 10.
+```
+# 🎯 Bandit Level 11 → Level 12
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 11 to level 12. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+Locate and read the file that contains the password for the next level. The password may be hidden in a file with special permissions, unusual ownership, or located outside the home directory but accessible to the current account.
+
+---
+
+## 💡 Quick Tips
+- Start with `pwd && ls -la` to see your working directory and hidden files.  
+- Use `find` to search the filesystem for interesting files (by owner, permissions, size, or name).  
+- Inspect file metadata with `stat` and `file` before trying to open files.  
+- Use `strings`, `hexdump`/`xxd`, or `file` for non‑plain files.  
+- Keep any keys or passwords private — **do NOT** publish real secrets to GitHub. Use `<REDACTED>`.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+bandit12@bandit.labs.overthewire.org s password: Use the password you obtained from level 11 (store it only locally; do not push to remote).

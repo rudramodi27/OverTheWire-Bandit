@@ -113,3 +113,126 @@ cat ./...Hiding-From-You
 
 # The output of the above command is the password for level 3.
 ```
+# 🎯 Bandit Level 03 → Level 04
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 3 to level 4. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is located somewhere inside a directory called `inhere` in the home directory.
+
+---
+
+## 💡 Quick Tip
+- Use `ls -la` and `file` to inspect files and discover which file is likely to contain readable text.  
+- `find` is your friend when many files/subdirectories exist — filter by type/size to speed things up.  
+- Never publish real passwords — use `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used
+```bash
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+bandit4@bandit.labs.overthewire.org s password: Use the password you obtained from level 3 (store it only locally; do not push to remote).
+ls
+cd inhere
+ls -a
+file ./*
+cat ./-file07
+
+# The output of the above command is the password for level 4.
+```
+# 🎯 Bandit Level 04 → Level 05
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 4 to level 5. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is hidden somewhere inside the `inhere` directory (it may be nested); you must locate and read the correct file to get the password.
+
+---
+
+## 💡 Quick Tips
+- Use `find` to recursively search — it's the most reliable tool for nested directories.  
+- Use `file` to filter for plain text files.  
+- Use size filters (small files often contain short passwords) or inspect file types to narrow candidates quickly.  
+- Do **not** publish real passwords in your repo — use `<REDACTED>`.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+bandit5@bandit.labs.overthewire.org s password: Use the password you obtained from level 4 (store it only locally; do not push to remote).
+ls
+cd inhere
+find . -type f -size 1033c -not -executable -exec file {} + | grep ASCII
+cat ./maybehere07/.file2
+
+# The output of the above command is the password for level 5.
+```
+# 🎯 Bandit Level 05 → Level 06
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 5 to level 6. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+Locate and read the file that contains the password for the next level (it may be inside a directory or in an unusually-named file). 
+
+---
+
+## 💡 Quick Tips
+- When directories contain many files, use `find` + `file` to quickly locate plain-text candidates.  
+- Use `strings` on binary/data files that might hide readable text.  
+- Use `ls -lb` to reveal weird/hidden characters in filenames.  
+- **Do NOT** publish real passwords — replace them with `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+bandit6@bandit.labs.overthewire.org s password: Use the password you obtained from level 5 (store it only locally; do not push to remote).
+ls
+find / -type f -user bandit7 -group bandit6 -size 33
+find / -type f -user bandit7 -group bandit6 -size 33c 2> dev/null/var/lib/dpkg/info/bandit7.password
+cat /var/lib/dpkg/info/bandit7.password
+
+# The output of the above command is the password for level 6.
+```
+# 🎯 Bandit Level 06 → Level 07
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 6 to level 7. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is hidden in a file somewhere in the home directory — it may be encoded or archived (not plain text).
+
+---
+
+## 💡 Quick Tips
+- If a file is not plain text, try `file`, `strings`, or view a hex dump (`xxd` / `hexdump`) to inspect it.  
+- Common encodings/compressions used in Bandit: Base64, gzip, bzip2, tar, zip. Try decoding/unpacking systematically.  
+- Use `file` first — it often tells you the format (e.g., gzip compressed data, ASCII text, POSIX tar archive).  
+- **Do NOT** publish real passwords — use `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit7@bandit.labs.overthewire.org -p 2220
+bandit7@bandit.labs.overthewire.org s password: Use the password you obtained from level 6 (store it only locally; do not push to remote).
+ls
+head -n 10 data.txt
+grep millionth data.txt
+
+# The output of the above command is the password for level 7.
+```

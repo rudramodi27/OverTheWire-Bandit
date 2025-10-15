@@ -28,7 +28,7 @@ Access the first file in the home directory.
 **💡 Tip:**  
 Hidden files can be listed with `ls -la`.
 
-**Commands Used:**  
+## 📝 Commands Used  
 ```bash
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 bandit0@bandit.labs.overthewire.org s password: b*n*#t0

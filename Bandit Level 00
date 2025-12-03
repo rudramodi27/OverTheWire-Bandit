@@ -1,0 +1,16 @@
+# 🎯 Bandit Level 00
+
+**Level Goal:**  
+Access the first file in the home directory.
+
+**💡 Tip:**  
+Hidden files can be listed with `ls -la`.
+
+## 📝 Commands Used  
+```bash
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+bandit0@bandit.labs.overthewire.org s password: b*n*#t0
+ls
+cat readme
+
+# The output of the above command is the password for level 0.

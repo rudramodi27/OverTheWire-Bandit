@@ -1,0 +1,30 @@
+# 🎯 Bandit Level 04 → Level 05
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 4 to level 5. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is hidden somewhere inside the `inhere` directory (it may be nested); you must locate and read the correct file to get the password.
+
+---
+
+## 💡 Quick Tips
+- Use `find` to recursively search — it's the most reliable tool for nested directories.  
+- Use `file` to filter for plain text files.  
+- Use size filters (small files often contain short passwords) or inspect file types to narrow candidates quickly.  
+- Do **not** publish real passwords in your repo — use `<REDACTED>`.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+bandit5@bandit.labs.overthewire.org s password: Use the password you obtained from level 4 (store it only locally; do not push to remote).
+ls
+cd inhere
+find . -type f -size 1033c -not -executable -exec file {} + | grep ASCII
+cat ./maybehere07/.file2
+
+# The output of the above command is the password for level 5.

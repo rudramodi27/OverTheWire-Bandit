@@ -1,0 +1,31 @@
+# 🎯 Bandit Level 03 → Level 04
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 3 to level 4. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is located somewhere inside a directory called `inhere` in the home directory.
+
+---
+
+## 💡 Quick Tip
+- Use `ls -la` and `file` to inspect files and discover which file is likely to contain readable text.  
+- `find` is your friend when many files/subdirectories exist — filter by type/size to speed things up.  
+- Never publish real passwords — use `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used
+```bash
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+bandit4@bandit.labs.overthewire.org s password: Use the password you obtained from level 3 (store it only locally; do not push to remote).
+ls
+cd inhere
+ls -a
+file ./*
+cat ./-file07
+
+# The output of the above command is the password for level 4.
+```

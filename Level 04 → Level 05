@@ -28,3 +28,5 @@ find . -type f -size 1033c -not -executable -exec file {} + | grep ASCII
 cat ./maybehere07/.file2
 
 # The output of the above command is the password for level 5.
+```
+

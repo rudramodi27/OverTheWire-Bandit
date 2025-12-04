@@ -1,0 +1,31 @@
+# 🎯 Bandit Level 05 → Level 06
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 5 to level 6. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+Locate and read the file that contains the password for the next level (it may be inside a directory or in an unusually-named file). 
+
+---
+
+## 💡 Quick Tips
+- When directories contain many files, use `find` + `file` to quickly locate plain-text candidates.  
+- Use `strings` on binary/data files that might hide readable text.  
+- Use `ls -lb` to reveal weird/hidden characters in filenames.  
+- **Do NOT** publish real passwords — replace them with `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+bandit6@bandit.labs.overthewire.org s password: Use the password you obtained from level 5 (store it only locally; do not push to remote).
+ls
+find / -type f -user bandit7 -group bandit6 -size 33
+find / -type f -user bandit7 -group bandit6 -size 33c 2> dev/null/var/lib/dpkg/info/bandit7.password
+cat /var/lib/dpkg/info/bandit7.password
+
+# The output of the above command is the password for level 6.
+```

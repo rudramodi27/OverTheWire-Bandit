@@ -1,0 +1,30 @@
+# 🎯 Bandit Level 07 → Level 08
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 7 to level 8. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+Find and read the file that contains the password for the next level. The file may have unusual permissions or be accessible only in a specific way.
+
+---
+
+## 💡 Quick Tips
+- Check file permissions and ownership with `ls -la`. Look for files readable by your user or group.  
+- Use `find` to search for files with specific permissions (`-perm`) or ownership (`-user`/`-group`).  
+- If a file looks like a private key, **do not** publish it — keep it local and safe.  
+- **Do NOT** publish real passwords — use `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+bandit8@bandit.labs.overthewire.org s password: Use the password you obtained from level 7 (store it only locally; do not push to remote).
+ls
+head -n 10 data.txt
+cat data.txt | sort | uniq -u
+
+# The output of the above command is the password for level 7.
+```

@@ -1,0 +1,30 @@
+# 🎯 Bandit Level 06 → Level 07
+
+**⚠️ SPOILER ALERT**  
+This file contains the full solution for moving from Bandit level 6 to level 7. If you want to solve it yourself, stop reading now.
+
+---
+
+## 🎯 Level Goal
+The password for the next level is hidden in a file somewhere in the home directory — it may be encoded or archived (not plain text).
+
+---
+
+## 💡 Quick Tips
+- If a file is not plain text, try `file`, `strings`, or view a hex dump (`xxd` / `hexdump`) to inspect it.  
+- Common encodings/compressions used in Bandit: Base64, gzip, bzip2, tar, zip. Try decoding/unpacking systematically.  
+- Use `file` first — it often tells you the format (e.g., gzip compressed data, ASCII text, POSIX tar archive).  
+- **Do NOT** publish real passwords — use `<REDACTED>` in public repos.
+
+---
+
+## 📝 Commands Used (examples)
+```bash
+ssh bandit7@bandit.labs.overthewire.org -p 2220
+bandit7@bandit.labs.overthewire.org s password: Use the password you obtained from level 6 (store it only locally; do not push to remote).
+ls
+head -n 10 data.txt
+grep millionth data.txt
+
+# The output of the above command is the password for level 7.
+```

@@ -21,7 +21,7 @@ The password for the next level is stored in a file called `-` located in the ho
 ssh bandit2@bandit.labs.overthewire.org -p 2220
 bandit2@bandit.labs.overthewire.org s password: Use the password you obtained from level 1 (store it only locally; do not push to remote).
 ls
-cat ./--spaces\ in \ this \ filename\--
+cat -- "--spaces in this filename--"
 
 # The output of the above command is the password for level 2.
 ```

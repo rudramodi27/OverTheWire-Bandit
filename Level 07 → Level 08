@@ -23,8 +23,7 @@ Find and read the file that contains the password for the next level. The file m
 ssh bandit8@bandit.labs.overthewire.org -p 2220
 bandit8@bandit.labs.overthewire.org s password: Use the password you obtained from level 7 (store it only locally; do not push to remote).
 ls
-head -n 10 data.txt
-cat data.txt | sort | uniq -u
+sort data.txt | uniq -u
 
 # The output of the above command is the password for level 7.
 ```

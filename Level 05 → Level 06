@@ -23,8 +23,7 @@ Locate and read the file that contains the password for the next level (it may b
 ssh bandit6@bandit.labs.overthewire.org -p 2220
 bandit6@bandit.labs.overthewire.org s password: Use the password you obtained from level 5 (store it only locally; do not push to remote).
 ls
-find / -type f -user bandit7 -group bandit6 -size 33
-find / -type f -user bandit7 -group bandit6 -size 33c 2> dev/null/var/lib/dpkg/info/bandit7.password
+find / -type f -user bandit7 -group bandit6 -size 33c
 cat /var/lib/dpkg/info/bandit7.password
 
 # The output of the above command is the password for level 6.

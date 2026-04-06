@@ -23,8 +23,7 @@ The password for the next level is hidden in a file somewhere in the home direct
 ssh bandit7@bandit.labs.overthewire.org -p 2220
 bandit7@bandit.labs.overthewire.org s password: Use the password you obtained from level 6 (store it only locally; do not push to remote).
 ls
-head -n 10 data.txt
-grep millionth data.txt
+grep "millionth" data.txt
 
 # The output of the above command is the password for level 7.
 ```
